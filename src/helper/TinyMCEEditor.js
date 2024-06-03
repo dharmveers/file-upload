@@ -61,10 +61,13 @@ const TinyMCEEditor = ({ value, onChange }) => {
         .catch(err=>alert(err))
       }
 
+      console.log("value..."+value)
+
   return (
     <>
     <Editor
-      initialValue={value}
+      initialValue='Enter here'
+      value={value}
       apiKey={api_key}
       init={{
         height: 300,

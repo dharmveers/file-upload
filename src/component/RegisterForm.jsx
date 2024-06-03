@@ -21,9 +21,9 @@ const RegisterForm=()=>{
         // formData.append('pdfFile',file);
         // axios.post('http://localhost:8000/upload',formData,{headers:{"Content-Type":"multipart/form-data"}}).then((resp)=>console.log(resp.data)).catch(error=>console.log(error))
     }
-    const [editorContent, setEditorContent] = useState('');
-    const handleEditorChange=()=>{
-       
+    const [editorContent, setEditorContent] = useState();
+    const handleEditorChange=(content,editor)=>{
+       setEditorContent(content);
     }
 
     const handleOnChange=(e)=>{
