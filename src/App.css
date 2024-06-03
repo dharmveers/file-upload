@@ -1,0 +1,57 @@
+.container{
+  align-items: center;
+  padding: 3rem;
+}
+
+.register-form{
+  display: flex;
+  flex-direction: column;
+  background-color: beige;
+  color: blue;
+  width: 500px;
+  border: solid 2px blueviolet;
+  margin: auto;
+  justify-content: center;
+}
+input{
+  color: black;
+  padding: .2rem;
+}
+
+label{
+
+  text-align: left;
+}
+
+
+.tox .tox-dropzone {
+  align-items: center;
+  background: #fff;
+  border: 2px dashed #eee;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  justify-content: center;
+  min-height: 100px;
+  padding: 10px;
+}
+
+.tox :not(svg):not(rect) {
+  box-sizing: inherit;
+  color: inherit;
+  cursor: inherit;
+  direction: inherit;
+  font-family: inherit;
+  font-size: inherit;
+  font-style: inherit;
+  font-weight: inherit;
+  line-height: inherit;
+  -webkit-tap-highlight-color: inherit;
+  text-align: inherit;
+  text-decoration: inherit;
+  text-shadow: inherit;
+  text-transform: inherit;
+  vertical-align: inherit;
+  white-space: inherit;
+}
