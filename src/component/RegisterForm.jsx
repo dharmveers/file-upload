@@ -1,7 +1,7 @@
 import axios from "axios";
 import { useEffect, useRef, useState } from "react";
-import { Validation } from "../helper/Validation";
 import TinyMCEEditor from "../helper/TinyMCEEditor";
+
 const RegisterForm=()=>{
 
     const[user,setUser]=useState({
@@ -12,7 +12,7 @@ const RegisterForm=()=>{
     })
 
     const[file,setFile]=useState();
-    const [errors,setErrors]=useState({})
+
     const handleOnSubmit=(e)=>{
         e.preventDefault();
         
@@ -28,8 +28,7 @@ const RegisterForm=()=>{
 
     const handleOnChange=(e)=>{
         setUser({...user,[e.target.name]:e.target.value});
-        setErrors(Validation(user));
-        console.log(errors)
+       
     }
     return (
         <div style={{backgroundColor:"GrayText",height:"97vh"}}>
@@ -39,16 +38,19 @@ const RegisterForm=()=>{
                     <h1 style={{textAlign:"center",fontSize:"30px"}}>Registration Form</h1>
                     <label htmlFor="username">UserName</label>
                     <input type="text" name="username" id="username"  onChange={handleOnChange}/>
-                    {errors.username && <span color="red">{errors.username}</span>}
+                    
                     <label htmlFor="mobileNo">MobileNo</label>
                     <input type="text" name="mobileNo" id="mobileNo" onChange={handleOnChange}/>
-                    {errors.mobileNo && <span color="red">{errors.mobileNo}</span>}
+
                     <label htmlFor="address">Address</label>
                     <input type="text" name="address" id="address" onChange={handleOnChange}/>
+                    
                     <label htmlFor="pdfFile">File</label>
                     <input type="file" name="pdfFile" id="pdfFile" onChange={(e)=>setFile(e.target.files[0])}/>
+                    
                     <label htmlFor="pdfFile">Text Editor</label>
                    <TinyMCEEditor value={editorContent} onChange={handleEditorChange} />
+                  
                 </form>
             </div>
         </div>
