@@ -1,6 +1,7 @@
 import axios from "axios";
 import { useEffect, useRef, useState } from "react";
 import TinyMCEEditor from "../helper/TinyMCEEditor";
+import RichTextEditor from "../helper/RichTextEditor";
 
 const RegisterForm=()=>{
 
@@ -49,7 +50,8 @@ const RegisterForm=()=>{
                     <input type="file" name="pdfFile" id="pdfFile" onChange={(e)=>setFile(e.target.files[0])}/>
                     
                     <label htmlFor="pdfFile">Text Editor</label>
-                   <TinyMCEEditor value={editorContent} onChange={handleEditorChange} />
+                   {/* <TinyMCEEditor value={editorContent} onChange={handleEditorChange} /> */}
+                   <RichTextEditor/>
                   
                 </form>
             </div>
